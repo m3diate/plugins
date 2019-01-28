@@ -1,6 +1,6 @@
 package io.flutter.plugins.firebasemlvision;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.ml.vision.FirebaseVision;

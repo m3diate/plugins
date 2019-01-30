@@ -15,6 +15,8 @@ enum BiometricType { face, fingerprint, iris }
 
 const MethodChannel _channel = MethodChannel('plugins.flutter.io/local_auth');
 
+enum FPDialogTheme { KALIUM }
+
 /// A Flutter plugin for authenticating the user identity locally.
 class LocalAuthentication {
   /// Authenticates the user with biometrics available on the device.
@@ -54,12 +56,21 @@ class LocalAuthentication {
     bool stickyAuth = false,
     AndroidAuthMessages androidAuthStrings = const AndroidAuthMessages(),
     IOSAuthMessages iOSAuthStrings = const IOSAuthMessages(),
+    FPDialogTheme dialogTheme,
   }) async {
     assert(localizedReason != null);
+    String dialogThemeStr;
+    switch (dialogTheme) {
+      case FPDialogTheme.KALIUM:
+      default:
+        dialogThemeStr = "kalium";
+        break;
+    }
     final Map<String, Object> args = <String, Object>{
       'localizedReason': localizedReason,
       'useErrorDialogs': useErrorDialogs,
       'stickyAuth': stickyAuth,
+      'theme':dialogThemeStr
     };
     if (Platform.isIOS) {
       args.addAll(iOSAuthStrings.args);

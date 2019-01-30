@@ -6,4 +6,10 @@
     <item name="android:textSize">14sp</item>
     <item name="android:colorAccent">#FF009688</item>
   </style>
+  <style name="AlertDialogKalium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">#FF212124</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">#FFFBDD11</item>
+  </style>
 </resources>

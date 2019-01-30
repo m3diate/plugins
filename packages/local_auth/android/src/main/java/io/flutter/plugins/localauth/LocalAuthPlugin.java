@@ -13,6 +13,7 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugins.localauth.AuthenticationHelper.AuthCompletionHandler;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /** LocalAuthPlugin */
@@ -47,6 +48,9 @@ public class LocalAuthPlugin implements MethodCallHandler {
         result.error("no_activity", "local_auth plugin requires a foreground activity", null);
         return;
       }
+      if (!(call.arguments instanceof Map)) {
+        throw new IllegalArgumentException("Map argument expected");
+      }
       AuthenticationHelper authenticationHelper =
           new AuthenticationHelper(
               activity,
@@ -72,7 +76,8 @@ public class LocalAuthPlugin implements MethodCallHandler {
                     result.error(code, error, null);
                   }
                 }
-              });
+              },
+              (String) call.argument("theme"));
       authenticationHelper.authenticate();
     } else if (call.method.equals("getAvailableBiometrics")) {
       try {

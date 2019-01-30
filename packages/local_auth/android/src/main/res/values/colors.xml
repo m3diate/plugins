@@ -9,4 +9,6 @@
   <color name="success_color_kalium">#FF4CBF4B</color>
   <color name="text_color_kalium">#E6FFFFFF</color>
   <color name="text_color_hint_kalium">#99FFFFFF</color>
+  <color name="primary_color_kalium">#FFFBDD11</color>
+  <color name="background_color_kalium">#FF212124</color>
 </resources>

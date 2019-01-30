@@ -227,6 +227,7 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     View view = LayoutInflater.from(activity).inflate(R.layout.scan_fp, null, false);
     TextView fpDescription = (TextView) view.findViewById(R.id.fingerprint_description);
     TextView status = (TextView) view.findViewById(R.id.fingerprint_status);
+    ImageView fpIcon = (ImageView) view.findViewById(R.id.fingerprint_icon);
     fpDescription.setText((String) call.argument("localizedReason"));
     status.setText((String) call.argument("fingerprintHint"));
     int dialogStyle = R.style.AlertDialogCustom;
@@ -234,6 +235,7 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
       fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_kalium));
       status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_kalium));
       dialogStyle = R.style.AlertDialogKalium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_fingerprint_dark_24dp));
     }
     Context context = new ContextThemeWrapper(activity, dialogStyle);
     OnClickListener cancelHandler =

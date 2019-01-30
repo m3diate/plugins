@@ -48,13 +48,6 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     FAILURE
   }
 
-  private String theme;
-  private int successColor;
-  private int errorColor;
-  private int dialogStyle;
-  private int textColor;
-  private int hintColor;
-
   /** The callback that handles the result of this authentication process. */
   interface AuthCompletionHandler {
 
@@ -92,20 +85,12 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
   private CancellationSignal cancellationSignal;
 
   AuthenticationHelper(
-      Activity activity, MethodCall call, AuthCompletionHandler completionHandler, String theme) {
+      Activity activity, MethodCall call, AuthCompletionHandler completionHandler) {
     this.activity = activity;
     this.completionHandler = completionHandler;
     this.call = call;
     this.keyguardManager = (KeyguardManager) activity.getSystemService(Context.KEYGUARD_SERVICE);
     this.fingerprintManager = FingerprintManagerCompat.from(activity);
-    this.theme = theme;
-    if (theme.equals("kalium")) {
-      successColor = 0xFF4CBF4B;
-      errorColor = R.color.warning_color;
-      dialogStyle = R.style.AlertDialogKalium;
-      textColor = 0xE6FFFFFF;
-      hintColor = 0x99FFFFFF;
-    }
   }
 
   void authenticate() {
@@ -222,11 +207,15 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     switch (state) {
       case FAILURE:
         icon.setImageResource(R.drawable.fingerprint_warning_icon);
-        resultInfo.setTextColor(errorColor);
+        if (call.argument("theme").equals("kalium")) {
+          resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.warning_color));
+        }
         break;
       case SUCCESS:
         icon.setImageResource(R.drawable.fingerprint_success_icon);
-        resultInfo.setTextColor(successColor);
+        if (call.argument("theme").equals("kalium")) {
+          resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.success_color_kalium));
+        }
         break;
     }
     resultInfo.setText(message);
@@ -237,11 +226,15 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
   private void showFingerprintDialog() {
     View view = LayoutInflater.from(activity).inflate(R.layout.scan_fp, null, false);
     TextView fpDescription = (TextView) view.findViewById(R.id.fingerprint_description);
-    fpDescription.setTextColor(textColor);
     TextView status = (TextView) view.findViewById(R.id.fingerprint_status);
-    status.setTextColor(hintColor);
     fpDescription.setText((String) call.argument("localizedReason"));
     status.setText((String) call.argument("fingerprintHint"));
+    int dialogStyle = R.style.AlertDialogCustom;
+    if (call.argument("theme").equals("kalium")) {
+      fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_kalium));
+      status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_kalium));
+      dialogStyle = R.style.AlertDialogKalium;
+    }
     Context context = new ContextThemeWrapper(activity, dialogStyle);
     OnClickListener cancelHandler =
         new OnClickListener() {

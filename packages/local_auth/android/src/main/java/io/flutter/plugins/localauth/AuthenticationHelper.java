@@ -235,7 +235,7 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
       fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_kalium));
       status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_kalium));
       dialogStyle = R.style.AlertDialogKalium;
-      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_fingerprint_dark_24dp));
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_kalium));
     }
     Context context = new ContextThemeWrapper(activity, dialogStyle);
     OnClickListener cancelHandler =

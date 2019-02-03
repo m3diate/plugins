@@ -207,14 +207,14 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     switch (state) {
       case FAILURE:
         icon.setImageResource(R.drawable.fingerprint_warning_icon);
-        if (call.argument("theme").equals("kalium")) {
-          resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.warning_color));
-        }
+        resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.warning_color));
         break;
       case SUCCESS:
         icon.setImageResource(R.drawable.fingerprint_success_icon);
         if (call.argument("theme").equals("kalium")) {
           resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.success_color_kalium));
+        } else if (call.argument("theme").equals("natrium")) {
+          resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.success_color_natrium));
         }
         break;
     }
@@ -231,11 +231,14 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     fpDescription.setText((String) call.argument("localizedReason"));
     status.setText((String) call.argument("fingerprintHint"));
     int dialogStyle = R.style.AlertDialogCustom;
+    fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_kalium));
+    status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_kalium));
     if (call.argument("theme").equals("kalium")) {
-      fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_kalium));
-      status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_kalium));
       dialogStyle = R.style.AlertDialogKalium;
       fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_kalium));
+    } else if (call.argument("theme").equals("natrium")) {
+      dialogStyle = R.style.AlertDialogNatrium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_natrium));
     }
     Context context = new ContextThemeWrapper(activity, dialogStyle);
     OnClickListener cancelHandler =

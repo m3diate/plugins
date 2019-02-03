@@ -7,8 +7,11 @@
   <color name="black_text">#212121</color>
   <color name="grey_text">#757575</color>
   <color name="success_color_kalium">#FF4CBF4B</color>
+  <color name="success_color_natrium">#FF4AFFAE</color>
   <color name="text_color_kalium">#E6FFFFFF</color>
   <color name="text_color_hint_kalium">#99FFFFFF</color>
   <color name="primary_color_kalium">#FFFBDD11</color>
   <color name="background_color_kalium">#FF212124</color>
+  <color name="primary_color_natrium">#FFA3CDFF</color>
+  <color name="background_color_natrium">#FF2A3A4D</color>
 </resources>

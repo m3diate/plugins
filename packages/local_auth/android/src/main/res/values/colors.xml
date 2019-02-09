@@ -14,4 +14,12 @@
   <color name="background_color_kalium">#FF212124</color>
   <color name="primary_color_natrium">#FFA3CDFF</color>
   <color name="background_color_natrium">#FF2A3A4D</color>
+  <color name="primary_color_titanium">#FF61C6AD</color>
+  <color name="background_color_titanium">#FF052029</color>
+  <color name="text_color_iridium">#E6424E49</color>
+  <color name="text_color_hint_iridium">#99424E49</color>
+  <color name="primary_color_iridium">#FF008F53</color>
+  <color name="background_color_iridium">#FFFFFFFF</color>
+  <color name="primary_color_beryllium">#FFBDA1FF</color>
+  <color name="background_color_beryllium">#FF18181A</color>
 </resources>

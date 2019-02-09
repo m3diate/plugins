@@ -18,4 +18,22 @@
     <item name="android:textSize">14sp</item>
     <item name="android:colorAccent">@color/primary_color_natrium</item>
   </style>
+  <style name="AlertDialogTitanium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_titanium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_titanium</item>
+  </style>
+  <style name="AlertDialogIridium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_iridium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_iridium</item>
+  </style>
+  <style name="AlertDialogBeryllium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_beryllium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_beryllium</item>
+  </style>
 </resources>

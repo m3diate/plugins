@@ -215,6 +215,8 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
           resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.success_color_kalium));
         } else if (call.argument("theme").equals("natrium")) {
           resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.success_color_natrium));
+        } else {
+          resultInfo.setTextColor(ContextCompat.getColor(activity, R.color.success_color_kalium));
         }
         break;
     }
@@ -239,6 +241,17 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     } else if (call.argument("theme").equals("natrium")) {
       dialogStyle = R.style.AlertDialogNatrium;
       fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_natrium));
+    } else if (call.argument("theme").equals("titanium")) {
+      dialogStyle = R.style.AlertDialogTitanium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_titanium));
+    } else if (call.argument("theme").equals("iridium")) {
+      dialogStyle = R.style.AlertDialogIridium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_iridium));
+      fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_iridium));
+      status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_iridium));
+    } else if (call.argument("theme").equals("beryllium")) {
+      dialogStyle = R.style.AlertDialogBeryllium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_beryllium));
     }
     Context context = new ContextThemeWrapper(activity, dialogStyle);
     OnClickListener cancelHandler =

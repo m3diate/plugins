@@ -8,7 +8,7 @@
                 android:height="40dp"/>
         </shape>
     </item>
-    <item android:drawable="@drawable/ic_fingerprint_dark_24dp"
+    <item android:drawable="@drawable/ic_fingerprint_beryllium"
         android:bottom="8dp"
         android:left="8dp"
         android:right="8dp"

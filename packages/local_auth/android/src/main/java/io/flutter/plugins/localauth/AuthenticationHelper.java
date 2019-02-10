@@ -252,6 +252,14 @@ class AuthenticationHelper extends FingerprintManagerCompat.AuthenticationCallba
     } else if (call.argument("theme").equals("beryllium")) {
       dialogStyle = R.style.AlertDialogBeryllium;
       fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_beryllium));
+    } else if (call.argument("theme").equals("ruthium")) {
+      dialogStyle = R.style.AlertDialogRuthium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_ruthium));
+      fpDescription.setTextColor(ContextCompat.getColor(activity, R.color.text_color_ruthium));
+      status.setTextColor(ContextCompat.getColor(activity, R.color.text_color_hint_ruthium));
+    } else if (call.argument("theme").equals("radium")) {
+      dialogStyle = R.style.AlertDialogRadium;
+      fpIcon.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.fingerprint_initial_icon_radium));
     }
     Context context = new ContextThemeWrapper(activity, dialogStyle);
     OnClickListener cancelHandler =

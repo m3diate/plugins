@@ -36,4 +36,16 @@
     <item name="android:textSize">14sp</item>
     <item name="android:colorAccent">@color/primary_color_beryllium</item>
   </style>
+  <style name="AlertDialogRuthium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_ruthium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_ruthium</item>
+  </style>
+  <style name="AlertDialogRadium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_radium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_radium</item>
+  </style>
 </resources>

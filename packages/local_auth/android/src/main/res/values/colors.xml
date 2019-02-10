@@ -22,4 +22,10 @@
   <color name="background_color_iridium">#FFFFFFFF</color>
   <color name="primary_color_beryllium">#FFBDA1FF</color>
   <color name="background_color_beryllium">#FF18181A</color>
+  <color name="primary_color_radium">#FF39E289</color>
+  <color name="background_color_radium">#FF1A0636</color>
+  <color name="text_color_ruthium">#FF7A6262</color>
+  <color name="text_color_hint_ruthium">#997A6262</color>
+  <color name="primary_color_ruthium">#FFD5727E</color>
+  <color name="background_color_ruthium">#FFFFC9D0</color>
 </resources>

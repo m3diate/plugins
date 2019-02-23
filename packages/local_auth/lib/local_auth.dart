@@ -98,6 +98,7 @@ class LocalAuthentication {
         break;
       case FPDialogTheme.THORIUM:
         dialogThemeStr = "thorium";
+        break;
       case FPDialogTheme.KALIUM:
       default:
         dialogThemeStr = "kalium";

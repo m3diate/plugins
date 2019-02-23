@@ -15,7 +15,18 @@ enum BiometricType { face, fingerprint, iris }
 
 const MethodChannel _channel = MethodChannel('plugins.flutter.io/local_auth');
 
-enum FPDialogTheme { KALIUM, NATRIUM, TITANIUM, IRIDIUM, BERYLLIUM, RADIUM, RUTHIUM }
+enum FPDialogTheme {
+  KALIUM,
+  NATRIUM,
+  TITANIUM,
+  IRIDIUM,
+  BERYLLIUM,
+  RADIUM,
+  RUTHIUM,
+  INDIUM,
+  NEPTUNIUM,
+  THORIUM
+}
 
 /// A Flutter plugin for authenticating the user identity locally.
 class LocalAuthentication {

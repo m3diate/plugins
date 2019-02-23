@@ -28,4 +28,15 @@
   <color name="text_color_hint_ruthium">#997A6262</color>
   <color name="primary_color_ruthium">#FFD5727E</color>
   <color name="background_color_ruthium">#FFFFC9D0</color>
+
+  <color name="text_color_indium">#E6424E49</color>
+  <color name="text_color_hint_indium">#99424E49</color>
+  <color name="primary_color_indium">#FF0050BB</color>
+  <color name="background_color_indium">#FFFFFFFF</color>
+
+  <color name="primary_color_neptunium">#FF4A90E2</color>
+  <color name="background_color_neptunium">#FF080840</color>
+
+  <color name="primary_color_thorium">#FF75F3FF</color>
+  <color name="background_color_thorium">#FF2A1052</color>
 </resources>

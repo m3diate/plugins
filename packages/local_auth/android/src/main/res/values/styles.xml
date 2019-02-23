@@ -48,4 +48,22 @@
     <item name="android:textSize">14sp</item>
     <item name="android:colorAccent">@color/primary_color_radium</item>
   </style>
+  <style name="AlertDialogIndium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_indium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_indium</item>
+  </style>
+  <style name="AlertDialogNeptunium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_neptunium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_neptunium</item>
+  </style>
+  <style name="AlertDialogThorium" parent="@android:style/Theme.Material.Dialog.Alert">
+    <item name="android:background">@color/background_color_thorium</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:colorAccent">@color/primary_color_thorium</item>
+  </style>
 </resources>

@@ -90,6 +90,14 @@ class LocalAuthentication {
       case FPDialogTheme.RADIUM:
         dialogThemeStr = "radium";
         break;
+      case FPDialogTheme.INDIUM:
+        dialogThemeStr = "indium";
+        break;
+      case FPDialogTheme.NEPTUNIUM:
+        dialogThemeStr = "neptunium";
+        break;
+      case FPDialogTheme.THORIUM:
+        dialogThemeStr = "thorium";
       case FPDialogTheme.KALIUM:
       default:
         dialogThemeStr = "kalium";

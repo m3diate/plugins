@@ -2,7 +2,11 @@ name: firebase_admob
 description: Firebase AdMob plugin for Flutter applications.
 author: Flutter Team <flutter-dev@googlegroups.com>
 homepage: https://github.com/flutter/plugins/tree/master/packages/firebase_admob
+<<<<<<< HEAD
 version: 0.7.0
+=======
+version: 0.8.0+3
+>>>>>>> 9017d6e7f867af278edd7e8e584d52524f37443f
 
 flutter:
   plugin:

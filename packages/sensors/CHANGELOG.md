@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+## 0.4.0+1
+
+* Log a more detailed warning at build time about the previous AndroidX
+  migration.
+
+## 0.4.0
+
+* **Breaking change**. Migrate from the deprecated original Android Support
+  Library to AndroidX. This shouldn't result in any functional changes, but it
+  requires any Android apps using this plugin to [also
+  migrate](https://developer.android.com/jetpack/androidx/migrate) if they're
+  using the original support library.
+
+>>>>>>> 9017d6e7f867af278edd7e8e584d52524f37443f
 ## 0.3.5
 
 * Added missing test package dependency.

@@ -1,7 +1,13 @@
 name: camera
 description: A Flutter plugin for getting information about and controlling the
+<<<<<<< HEAD
   camera on Android and iOS. Supports previewing the camera feed and capturing images.
 version: 0.2.9+1
+=======
+  camera on Android and iOS. Supports previewing the camera feed, capturing images, capturing video,
+  and streaming image buffers to dart.
+version: 0.4.2
+>>>>>>> 9017d6e7f867af278edd7e8e584d52524f37443f
 authors:
   - Flutter Team <flutter-dev@googlegroups.com>
   - Luigi Agosti <luigi@tengio.com>

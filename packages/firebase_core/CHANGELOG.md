@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+## 0.3.1+1
+
+* Add nil check on static functions to prevent crashes or unwanted behaviors.
+
+## 0.3.1
+
+* Remove an assertion that can interfere with hot-restart.
+
+## 0.3.0+2
+
+* Remove categories.
+
+## 0.3.0+1
+
+* Log a more detailed warning at build time about the previous AndroidX
+  migration.
+
+## 0.3.0
+
+* **Breaking change**. Migrate from the deprecated original Android Support
+  Library to AndroidX. This shouldn't result in any functional changes, but it
+  requires any Android apps using this plugin to [also
+  migrate](https://developer.android.com/jetpack/androidx/migrate) if they're
+  using the original support library.
+
+>>>>>>> 9017d6e7f867af278edd7e8e584d52524f37443f
 ## 0.2.5+1
 
 * Bump Android dependencies to latest.

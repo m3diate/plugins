@@ -2,7 +2,12 @@ name: location_background_plugin
 description: A new flutter plugin project.
 author:  Flutter Team <flutter-dev@googlegroups.com>
 homepage: https://github.com/flutter/plugins/tree/master/packages/location_background
+<<<<<<< HEAD
 version: 0.0.2
+=======
+version: 0.1.0+1
+publish_to: none
+>>>>>>> 9017d6e7f867af278edd7e8e584d52524f37443f
 
 dependencies:
   flutter:

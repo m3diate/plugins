@@ -5,7 +5,7 @@
 package io.flutter.plugins.localauth;
 
 import android.app.Activity;
-import android.support.v4.hardware.fingerprint.FingerprintManagerCompat;
+import androidx.core.hardware.fingerprint.FingerprintManagerCompat;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -13,7 +13,6 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugins.localauth.AuthenticationHelper.AuthCompletionHandler;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /** LocalAuthPlugin */

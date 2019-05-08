@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import androidx.annotation.NonNull;
-import androidx.core.content.FileProvider;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
@@ -98,7 +97,7 @@ public class SharePlugin implements MethodChannel.MethodCallHandler {
     }
 
     Uri fileUri =
-        FileProvider.getUriForFile(
+      SharePluginFileProvider.getUriForFile(
             mRegistrar.context(),
             mRegistrar.context().getPackageName() + ".flutter.share_provider",
             file);

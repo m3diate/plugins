@@ -16,7 +16,7 @@ enum BiometricType { face, fingerprint, iris }
 const MethodChannel _channel = MethodChannel('plugins.flutter.io/local_auth');
 
 enum FPDialogTheme {
-  KALIUM,
+  PATCHED,
   NATRIUM,
   TITANIUM,
   IRIDIUM,
@@ -99,9 +99,9 @@ class LocalAuthentication {
       case FPDialogTheme.THORIUM:
         dialogThemeStr = "thorium";
         break;
-      case FPDialogTheme.KALIUM:
+      case FPDialogTheme.PATCHED:
       default:
-        dialogThemeStr = "kalium";
+        dialogThemeStr = "patched";
         break;
     }
     final Map<String, Object> args = <String, Object>{
